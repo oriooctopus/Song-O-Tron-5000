@@ -4,6 +4,7 @@ var cors = require('cors');
 // var db = require('../database-mysql');
 
 var app = express();
+app.set( 'port', ( process.env.PORT || 5000 ));
 
 app.use(cors());
 
@@ -54,7 +55,7 @@ app.post('/songData', function(req, res) {
 });
 
 
-app.listen(3000, function() {
-  console.log('listening on port 3000!');
+app.listen(app.get( 'port' ), function() {
+  console.log('listening on port', app.get('port'));
 });
 
