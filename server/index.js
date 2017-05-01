@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 
-// app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.get('/songData', function (req, res) {
   console.log(1234356786);
