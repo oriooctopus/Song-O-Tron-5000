@@ -59,4 +59,4 @@ app.listen(app.get( 'port' ), function() {
   console.log('listening on port', app.get('port'));
 });
 
-mysql://bda8b33bc1ad11:cbbe9291@us-cdbr-iron-east-03.cleardb.net/heroku_49b867008747083?reconnect=true
+// mysql://bda8b33bc1ad11:cbbe9291@us-cdbr-iron-east-03.cleardb.net/heroku_49b867008747083?reconnect=true
