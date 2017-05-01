@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'data'
+  host     : env('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net'),
+  user     : env('DB_USERNAME', 'bda8b33bc1ad11'),
+  password : env('DB_PASSWORD', 'cbbe9291'),
+  database : env('DB_DATABASE', 'heroku_49b867008747083')
 });
 
 var selectAll = function(callback) {

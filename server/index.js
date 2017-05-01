@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-// var db = require('../database-mysql');
+var db = require('../database-mysql');
 
 var app = express();
 app.set( 'port', ( process.env.PORT || 5000 ));
@@ -17,29 +17,29 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 app.get('/songData', function (req, res) {
   console.log(1234356786);
   res.end();
-  // db.selectAll(function(err, data) {
-  //   if (err) {
-  //     res.sendStatus(500);
-  //   } else {
-  //     var totalRating = 0;
-  //     var totalTempo = 0;
-  //     var totalSongsWithRatings = 0;
-  //     data.forEach(item => {
-  //       totalTempo += item.tempo;
-  //       if (item.rating) {
-  //         totalRating += item.rating
-  //         totalSongsWithRatings++;
-  //       }
-  //     });
-  //     var result = {
-  //       length: data.length,
-  //       totalRating: totalRating,
-  //       totalSongsWithRatings: totalSongsWithRatings,
-  //       totalTempo: totalTempo
-  //     }
-  //     res.json(result);
-  //   }
-  // });
+  db.selectAll(function(err, data) {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      var totalRating = 0;
+      var totalTempo = 0;
+      var totalSongsWithRatings = 0;
+      data.forEach(item => {
+        totalTempo += item.tempo;
+        if (item.rating) {
+          totalRating += item.rating
+          totalSongsWithRatings++;
+        }
+      });
+      var result = {
+        length: data.length,
+        totalRating: totalRating,
+        totalSongsWithRatings: totalSongsWithRatings,
+        totalTempo: totalTempo
+      }
+      res.json(result);
+    }
+  });
 });
 
 app.post('/songData', function(req, res) {
@@ -59,3 +59,4 @@ app.listen(app.get( 'port' ), function() {
   console.log('listening on port', app.get('port'));
 });
 
+mysql://bda8b33bc1ad11:cbbe9291@us-cdbr-iron-east-03.cleardb.net/heroku_49b867008747083?reconnect=true
