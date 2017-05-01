@@ -1,0 +1,98 @@
+* {
+  text-decoration: none;
+}
+section {
+  float: left;
+  text-align: center;
+}
+
+.side {
+  width: 36%;
+  border: 1px solid black;
+  height: 540px;
+}
+
+#center {
+  width: 28%;
+}
+
+#buttons {
+  width: 100%;
+}
+
+.customizations {
+  margin: 50px 10% 50px 10%;
+  display: block;
+}
+
+.customization {
+  margin-top: 25px;
+}
+
+.buttonContainer {
+  width: 30%;
+}
+
+.button {
+  width: 85px;
+  margin-top: 40px;
+  background-color: IndianRed;
+  color: white;
+  height: 85px;
+  border-radius: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.button:hover {
+  opacity: .95;
+  border: 1px solid IndianRed;
+  background-color: white;
+}
+
+.button:hover a {
+  color: IndianRed;
+  font-size: 15.2px;
+}
+
+.button a {
+  text-decoration: none;
+  padding-top: 36%;
+  font-size: 15px;
+  display: block;
+  color: white;
+}
+
+.button .fa {
+  color: white;
+  display: block;
+  font-size: 35px;
+  padding-top: 28.5%;
+}
+
+.button:hover .fa {
+  color: IndianRed;
+}
+
+.invisible {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+#statistics {
+  margin-top: 100px;
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  display: flex;
+}
+
+#averageRating, #averageTempo {
+  margin-left: 15px;
+}
+
