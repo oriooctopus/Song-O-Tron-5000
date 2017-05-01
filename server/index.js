@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.get('/songData', function (req, res) {
   console.log(1234356786);
+  res.end();
   // db.selectAll(function(err, data) {
   //   if (err) {
   //     res.sendStatus(500);
