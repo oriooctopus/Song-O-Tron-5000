@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.get('/songData', function (req, res) {
-  console.log(124356786);
+  console.log(1234356786);
   // db.selectAll(function(err, data) {
   //   if (err) {
   //     res.sendStatus(500);
